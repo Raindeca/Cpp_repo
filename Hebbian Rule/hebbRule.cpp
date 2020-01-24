@@ -41,6 +41,12 @@ int main()
 		cout<<"\n\n";
 	}
 
+	cout<<"Data Testing"<<endl;
+	int temp[4];
+	for (i = 0; i < 4; i++) {
+			temp[i] = bVal[3] + wVal[3][1]*xVal[i][0] + wVal[3][1]*xVal[i][1];
+			cout<<"Data Testing ke-"<<i+1<<" = "<<temp[i]<<endl;
+	}
 	return 0;
 }
 
