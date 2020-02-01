@@ -1,4 +1,4 @@
-#include <iostream>
+	#include <iostream>
 #include <cmath> //for sqrt function
 using namespace std;
 
@@ -13,7 +13,7 @@ int main()
 	float tempA, tempB; // storing temporary values for sqrt operation 
 	int y_ln; //Test the sqrt value of tempA and tempB
 
-	int wDataSet[2][6] = {
+	float wDataSet[2][6] = {
 		{1,0,0,0,1,0},  //Class 1
 		{0,1,1,1,1,0} // Class 2
 	};
@@ -66,13 +66,13 @@ int main()
 				if (y_ln == t[i])
 				{
 					wDataSet[y_ln][k] = wDataSet[y_ln][k] + alfa*(dataSet[i][k] - wDataSet[y_ln][k]); //Rumus LVQ untuk fix W value baru ada di buku halaman 189
-					wDataSet[y_ln][k] = round(wDataSet[y_ln][k]);
+					//wDataSet[y_ln][k] = roundf(wDataSet[y_ln][k]);
 					cout<<"w["<<y_ln+1<<"]"<<"["<<k+1<<"]"<<" = "<<wDataSet[y_ln][k]<<endl;
 				}
 
 				else {
 					wDataSet[y_ln][k] = wDataSet[y_ln][k] - alfa*(dataSet[i][k] - wDataSet[y_ln][k]); //yang di atas di tambah, ini dikurang
-					wDataSet[y_ln][k] = round(wDataSet[y_ln][k]);
+					//wDataSet[y_ln][k] = roundf(wDataSet[y_ln][k]);
 					cout<<"w["<<y_ln+1<<"]"<<"["<<k+1<<"]"<<" = "<<wDataSet[y_ln][k]<<endl;	
 				}
 			}
